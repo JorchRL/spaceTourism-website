@@ -1,0 +1,14 @@
+.app {
+  overflow-x: hidden;
+  .mainSlider {
+    // The number n of pages is fixed in the design so the simplest
+    // solution is to just harcode the slider with to n * 100vw
+    z-index: 0;
+    width: 400vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.6s ease;
+  }
+}
