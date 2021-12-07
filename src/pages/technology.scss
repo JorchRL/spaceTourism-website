@@ -1,0 +1,15 @@
+.technology {
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  .title {
+    color: white;
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-style: bold;
+  }
+}
