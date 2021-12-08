@@ -9,20 +9,99 @@
   justify-content: center;
 
   .contentContainer {
-    outline: 1px solid white;
+    // outline: 1px solid white;
     width: $desktopWidth;
     height: $desktopHeight;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    // display: flex;
+    // align-content: center;
+    // justify-content: center;
+    position: relative;
     .title {
-      color: white;
+      // outline: 1px solid white;
+      position: absolute;
+      top: 212px;
+      left: 165px;
+      h2 {
+        font-weight: 100;
+        font-size: $heading5Size;
+        letter-spacing: $heading5Spacing;
+        color: white;
+        text-transform: uppercase;
+        font-family: $condensedFont;
+        span {
+          color: grey;
+          font-weight: 600;
+          margin-right: 23px;
+        }
+      }
+    }
+
+    .planetSelector {
       display: flex;
-      height: inherit;
-      align-items: center;
-      justify-content: center;
-      font-size: 50px;
-      font-style: bold;
+      justify-content: space-between;
+      width: 283px;
+      // background-color: grey;
+      // outline: 1px solid yellow;
+      color: white;
+      position: absolute;
+      left: 833px;
+      top: 310px;
+      z-index: 3;
+      .textContainer {
+        text-transform: uppercase;
+        font-family: $condensedFont;
+        font-size: $navTextSize;
+        letter-spacing: $navTextSpacing;
+        // margin-right: 33px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          .indicator {
+            width: 100%;
+            &.active {
+              background-color: white;
+            }
+          }
+        }
+        .indicator {
+          margin-top: 11px;
+          width: 0%;
+          height: 3px;
+          background-color: white;
+          transition: all 0.3s ease;
+
+          &.active {
+            background-color: grey;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .planetSlider {
+      width: $desktopWidth * 5;
+      height: $desktopHeight;
+      display: flex;
+
+      z-index: 5;
+      transition: all 1s ease;
+      // background-color: grey;
+
+      .planetSlide {
+        color: white;
+        // width: calc(((100vw - #{$desktopWidth})) + #{$desktopWidth});
+        width: $desktopWidth;
+        height: $desktopHeight;
+        // margin-right: calc(100vw - #{$desktopWidth});
+        margin-right: calc((100vw - #{$desktopWidth}) / 1);
+        // outline: 1px solid coral;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
