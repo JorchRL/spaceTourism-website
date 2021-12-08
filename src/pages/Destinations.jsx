@@ -1,7 +1,7 @@
 import "./destinations.scss";
 import { useState } from "react";
 
-const Destinations = () => {
+const Destinations = ({ active }) => {
   const [currentPlanet, setCurrentPlanet] = useState(0);
 
   const handlePlanetChange = (id) => {
@@ -48,10 +48,30 @@ const Destinations = () => {
           style={{
             transform: `translateX( -${100 * currentPlanet}vw)`,
           }}>
-          <div className='planetSlide'>MOON</div>
-          <div className='planetSlide'>MARS</div>
-          <div className='planetSlide'>EUROPA</div>
-          <div className='planetSlide'>TITAN</div>
+          <div
+            className={
+              currentPlanet === 0 ? "planetSlide active" : "planetSlide"
+            }>
+            MOON
+          </div>
+          <div
+            className={
+              currentPlanet === 1 ? "planetSlide active" : "planetSlide"
+            }>
+            MARS
+          </div>
+          <div
+            className={
+              currentPlanet === 2 ? "planetSlide active" : "planetSlide"
+            }>
+            EUROPA
+          </div>
+          <div
+            className={
+              currentPlanet === 3 ? "planetSlide active" : "planetSlide"
+            }>
+            TITAN
+          </div>
         </div>
       </div>
     </div>
