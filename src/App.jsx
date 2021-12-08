@@ -8,11 +8,11 @@ import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleScreenChange = (id) => {
     setCurrentPage(id);
-    console.log(id);
+    // console.log(id);
   };
   return (
     <div className='app'>
@@ -26,9 +26,9 @@ const App = () => {
           transform: `translateX(${-100 * currentPage}vw)`,
         }}>
         <Home />
-        <Destinations />
-        <Crew />
-        <Technology />
+        <Destinations active={currentPage === 1 ? true : false} />
+        <Crew active={currentPage === 2 ? true : false} />
+        <Technology active={currentPage === 3 ? true : false} />
       </div>
     </div>
   );
