@@ -23,7 +23,7 @@ const App = () => {
       <div
         className='mainSlider'
         style={{
-          transform: `translateX(${-1440 * currentPage}px)`,
+          transform: `translateX(${-100 * currentPage}vw)`,
         }}>
         <Home />
         <Destinations />
