@@ -5,11 +5,13 @@
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  min-height: $desktopHeight;
+  min-width: $desktopWidth;
   display: flex;
   justify-content: center;
 
   .contentContainer {
-    outline: 1px solid white;
+    // outline: 1px solid white;
     width: $desktopWidth;
     height: $desktopHeight;
     display: flex;
@@ -59,23 +61,66 @@
       align-items: center;
       justify-content: center;
       height: 100%;
-      .circle {
+      .circleContainer {
         margin: 364px 0px 0px 116px;
-        width: 272px;
-        height: 272px;
-        background-color: white;
-        border-radius: 50%;
-      }
-      h3 {
-        text-transform: uppercase;
-        margin: 364px 0px 0px 116px;
-        position: absolute;
-        color: black;
-        z-index: 2;
-        font-family: $regularHeadingFont;
-        font-size: $heading4Size;
-        font-weight: 100;
-        letter-spacing: $subheading2Spacing;
+        z-index: 10;
+        // outline: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+          .bgCircle {
+            width: 370px;
+            height: 370px;
+            opacity: 0.5;
+          }
+          h3 {
+            // transform: scale(1.2);
+            font-size: 35px;
+          }
+          .circle {
+            width: 250px;
+            height: 250px;
+          }
+        }
+
+        .circle {
+          width: 274px;
+          height: 274px;
+          background-color: white;
+          border-radius: 50%;
+          position: absolute;
+          z-index: 3;
+          transition: all 0.5s ease;
+        }
+        .bgCircle {
+          // content: "hey";
+          // display: block;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: #373942;
+          opacity: 0.8;
+          z-index: 2;
+          transition: all 0.5s ease;
+        }
+
+        h3 {
+          text-transform: uppercase;
+          // margin: 364px 0px 0px 116px;
+          position: absolute;
+          color: black;
+          z-index: 2;
+          font-family: $regularHeadingFont;
+          font-size: $heading4Size;
+          font-weight: 100;
+          letter-spacing: $subheading2Spacing;
+          z-index: 11;
+          transition: all 0.5s ease;
+          // display: block;
+        }
       }
     }
   }

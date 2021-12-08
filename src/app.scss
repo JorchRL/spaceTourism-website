@@ -17,6 +17,8 @@
     margin: auto;
     width: 100vw * 4;
     height: 100vh;
+    min-width: $desktopWidth * 4;
+    min-height: $desktopHeight;
     display: flex;
     align-items: center;
     justify-content: flex-start;

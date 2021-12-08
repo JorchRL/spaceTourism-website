@@ -18,8 +18,11 @@ const Home = () => {
           </div>
         </div>
         <div className='right'>
-          <div className='circle'></div>
-          <h3>Explore</h3>
+          <div className='circleContainer'>
+            <div className='bgCircle'></div>
+            <div className='circle'></div>
+            <h3>Explore</h3>
+          </div>
         </div>
       </div>
     </div>
