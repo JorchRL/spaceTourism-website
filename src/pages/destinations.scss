@@ -20,7 +20,7 @@
       // outline: 1px solid white;
       position: absolute;
       top: 212px;
-      left: 165px;
+      left: 166px;
       h2 {
         font-weight: 100;
         font-size: $heading5Size;
@@ -31,7 +31,7 @@
         span {
           color: grey;
           font-weight: 600;
-          margin-right: 23px;
+          margin-right: 26px;
         }
       }
     }
@@ -103,9 +103,85 @@
         align-items: center;
         opacity: 0;
         transition: all 1s ease;
+        // position: relative;
+        // top: 0px;
+        // left: 0px;
 
         &.active {
           opacity: 1;
+        }
+
+        .imgContainer {
+          // width: 50%;
+          // outline: 1px solid green;
+          position: relative;
+          top: 127px;
+          left: -53px;
+          // display: flex;
+        }
+        .infoContainer {
+          position: relative;
+          top: 141px;
+          left: 105px;
+          width: 429px;
+          height: 420px;
+          // outline: 1px solid green;
+          .name {
+            font-size: $heading2Size;
+            font-family: $regularHeadingFont;
+            font-weight: 100;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+          }
+          .description {
+            font-size: $bodyTextSize;
+            font-family: $regularTextFont;
+            font-weight: 100;
+            line-height: 32px;
+            margin-bottom: 52px;
+          }
+
+          .statsContainer {
+            font-size: $bodyTextSize;
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            .left {
+              padding-top: 30px;
+              margin-right: 80px;
+              .header {
+                font-family: $condensedFont;
+                text-transform: uppercase;
+                font-weight: 100;
+                font-size: $subheading2Size;
+                letter-spacing: $subheading2Spacing;
+                margin-bottom: 12px;
+              }
+              h2 {
+                font-family: $regularHeadingFont;
+                font-weight: 100;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+              }
+            }
+            .right {
+              padding-top: 30px;
+              .header {
+                font-family: $condensedFont;
+                font-weight: 100;
+                text-transform: uppercase;
+                font-size: $subheading2Size;
+                letter-spacing: $subheading2Spacing;
+                margin-bottom: 12px;
+              }
+              h2 {
+                text-transform: uppercase;
+                font-family: $regularHeadingFont;
+                font-weight: 100;
+                letter-spacing: 0.5px;
+              }
+            }
+          }
         }
       }
     }
