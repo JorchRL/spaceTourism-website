@@ -21,25 +21,37 @@ const Destinations = ({ active }) => {
           <div className='menuItem' onClick={() => handlePlanetChange(0)}>
             <div className='textContainer'>
               Moon
-              <div className='indicator'></div>
+              <div
+                className={
+                  currentPlanet === 0 ? "indicator active" : "indicator"
+                }></div>
             </div>
           </div>
           <div className='menuItem' onClick={() => handlePlanetChange(1)}>
             <div className='textContainer'>
               Mars
-              <div className='indicator'></div>
+              <div
+                className={
+                  currentPlanet === 1 ? "indicator active" : "indicator"
+                }></div>
             </div>
           </div>
           <div className='menuItem' onClick={() => handlePlanetChange(2)}>
             <div className='textContainer'>
               Europa
-              <div className='indicator'></div>
+              <div
+                className={
+                  currentPlanet === 2 ? "indicator active" : "indicator"
+                }></div>
             </div>
           </div>
           <div className='menuItem' onClick={() => handlePlanetChange(3)}>
             <div className='textContainer'>
               Titan
-              <div className='indicator'></div>
+              <div
+                className={
+                  currentPlanet === 3 ? "indicator active" : "indicator"
+                }></div>
             </div>
           </div>
         </div>
