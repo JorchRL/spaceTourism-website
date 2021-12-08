@@ -16,11 +16,14 @@ const App = () => {
   };
   return (
     <div className='app'>
-      <Navbar handleScreenChange={handleScreenChange} />
+      <Navbar
+        handleScreenChange={handleScreenChange}
+        currentPage={currentPage}
+      />
       <div
         className='mainSlider'
         style={{
-          transform: `translateX(${-100 * currentPage}vw)`,
+          transform: `translateX(${-1440 * currentPage}px)`,
         }}>
         <Home />
         <Destinations />

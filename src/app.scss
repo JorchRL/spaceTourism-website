@@ -1,11 +1,18 @@
+@import "./globals.scss";
+
 .app {
-  overflow-x: hidden;
+  width: $displayWidth;
+  height: $displayHeight;
+  margin: auto;
+  overflow: hidden;
+  // background-color: lightgreen;
   .mainSlider {
     // The number n of pages is fixed in the design so the simplest
     // solution is to just harcode the slider with to n * 100vw
     z-index: 0;
-    width: 400vw;
-    height: 100vh;
+    margin: auto;
+    width: $displayWidth * 4;
+    height: $displayHeight;
     display: flex;
     align-items: center;
     justify-content: flex-start;

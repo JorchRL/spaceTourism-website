@@ -1,7 +1,7 @@
 import React from "react";
 import "./navbar.scss";
 
-const Navbar = ({ handleScreenChange }) => {
+const Navbar = ({ handleScreenChange, currentPage }) => {
   const buttons = [
     {
       id: 0,
@@ -11,7 +11,7 @@ const Navbar = ({ handleScreenChange }) => {
     {
       id: 1,
       num: "01",
-      text: "Destinations",
+      text: "Destination",
     },
     {
       id: 2,
@@ -47,6 +47,7 @@ const Navbar = ({ handleScreenChange }) => {
               id={b.id}
               text={b.text}
               key={b.id}
+              currentPage={currentPage}
             />
           ))}
         </div>
@@ -55,7 +56,7 @@ const Navbar = ({ handleScreenChange }) => {
   );
 };
 
-const MenuItem = ({ num, id, text, handleScreenChange }) => {
+const MenuItem = ({ num, id, text, handleScreenChange, currentPage }) => {
   return (
     <div className='menuItem' onClick={() => handleScreenChange(id)}>
       <div className='textContainer'>
@@ -65,7 +66,8 @@ const MenuItem = ({ num, id, text, handleScreenChange }) => {
           {text}
         </h6>
       </div>
-      <div className='indicator'></div>
+      <div
+        className={currentPage === id ? "indicator active" : "indicator"}></div>
     </div>
   );
 };
