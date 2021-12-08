@@ -4,8 +4,10 @@ import React from "react";
 const Destinations = () => {
   return (
     <div className='destinations'>
-      <div className='title'>
-        <div>Destinations</div>
+      <div className='contentContainer'>
+        <div className='title'>
+          <div>Destinations</div>
+        </div>
       </div>
     </div>
   );
