@@ -8,7 +8,7 @@ import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(2);
 
   const handleScreenChange = (id) => {
     setCurrentPage(id);

@@ -10,7 +10,7 @@ const Destinations = ({ active }) => {
   const [currentPlanet, setCurrentPlanet] = useState(0);
 
   const destinations = data.destinations;
-  console.log(destinations);
+  // console.log(destinations);
 
   const handlePlanetChange = (id) => {
     setCurrentPlanet(id);
@@ -25,6 +25,7 @@ const Destinations = ({ active }) => {
             <span>01</span>pick your destination
           </h2>
         </div>
+
         <div className='planetSelector'>
           <div className='menuItem' onClick={() => handlePlanetChange(0)}>
             <div className='textContainer'>
@@ -63,6 +64,7 @@ const Destinations = ({ active }) => {
             </div>
           </div>
         </div>
+
         <div
           className='planetSlider'
           style={{
