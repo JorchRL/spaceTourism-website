@@ -1,7 +1,7 @@
 import "./home.scss";
 import React from "react";
 
-const Home = () => {
+const Home = ({ handleScreenChange }) => {
   return (
     <div className='home'>
       <div className='contentContainer'>
@@ -18,7 +18,9 @@ const Home = () => {
           </div>
         </div>
         <div className='right'>
-          <div className='circleContainer'>
+          <div
+            className='circleContainer'
+            onClick={() => handleScreenChange(1)}>
             <div className='bgCircle'></div>
             <div className='circle'></div>
             <h3>Explore</h3>
