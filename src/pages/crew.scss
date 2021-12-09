@@ -76,24 +76,26 @@
         opacity: 0;
         transition: all 1s ease;
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
 
         &.active {
           opacity: 1;
         }
 
         .imgContainer {
-          // outline: 1px solid green;
+          outline: 1px solid green;
           position: relative;
-          bottom: -200px;
-          left: 783px;
+          bottom: -102px;
+          left: 562px;
+
+          // TODO fine tune placement of each slide individually :(
         }
         .infoContainer {
           position: relative;
           outline: 1px solid green;
-          left: -345px;
-          top: 405px;
+          left: -569px;
+          top: 119px;
           width: 483px;
           height: 329px;
         }
