@@ -8,7 +8,7 @@ import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState(2);
+  const [currentPage, setCurrentPage] = useState(0);
 
   const handleScreenChange = (id) => {
     setCurrentPage(id);
@@ -25,7 +25,7 @@ const App = () => {
         style={{
           transform: `translateX(${-100 * currentPage}vw)`,
         }}>
-        <Home />
+        <Home handleScreenChange={handleScreenChange} />
         <Destinations active={currentPage === 1 ? true : false} />
         <Crew active={currentPage === 2 ? true : false} />
         <Technology active={currentPage === 3 ? true : false} />
