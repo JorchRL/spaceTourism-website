@@ -29,7 +29,11 @@ const Navbar = ({ handleScreenChange, currentPage }) => {
     <div className='navbar'>
       <div className='container'>
         <div className='logo'>
-          <svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='48'
+            height='48'
+            onClick={() => handleScreenChange(0)}>
             <g fill='none' fill-rule='evenodd'>
               <circle cx='24' cy='24' r='24' fill='#FFF' />
               <path

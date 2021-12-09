@@ -28,6 +28,15 @@
       margin-top: 50px;
       height: 100%;
       width: auto;
+
+      svg {
+        cursor: pointer;
+        transition: all 0.4s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
     }
 
     .menuContainer {
