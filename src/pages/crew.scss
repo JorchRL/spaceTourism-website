@@ -84,20 +84,58 @@
         }
 
         .imgContainer {
-          outline: 1px solid green;
+          // outline: 1px solid green;
           position: relative;
-          bottom: -102px;
-          left: 562px;
+          bottom: -50px;
+          left: 572px;
+          width: 500px;
+          height: 800px;
+
+          img {
+            // width: 100%;
+            // height: 100%;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+          }
 
           // TODO fine tune placement of each slide individually :(
         }
         .infoContainer {
           position: relative;
-          outline: 1px solid green;
-          left: -569px;
-          top: 119px;
-          width: 483px;
+          // outline: 1px solid green;
+          left: -560px;
+          top: 114px;
+          width: 490px;
           height: 329px;
+
+          .role {
+            font-family: $regularHeadingFont;
+            text-transform: uppercase;
+            font-weight: 100;
+            font-size: $heading4Size;
+            margin-bottom: 15px;
+          }
+
+          .name {
+            text-transform: uppercase;
+            font-weight: 100;
+            font-family: $regularHeadingFont;
+            font-size: $heading3Size;
+            margin-bottom: 26px;
+          }
+
+          .bio {
+            font-family: $regularTextFont;
+            font-size: $bodyTextSize;
+            font-weight: 100;
+            padding-right: 30px;
+            line-height: 32px;
+
+            &:hover {
+              opacity: 0;
+            }
+          }
         }
       }
     }
