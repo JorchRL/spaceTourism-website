@@ -15,6 +15,7 @@ const Technology = () => {
 
   const handleTechChange = (id) => {
     setCurrentTech(id);
+    console.log("change tech slide: ", id);
   };
   return (
     <div className='technology'>
@@ -31,22 +32,25 @@ const Technology = () => {
           <div
             className={currentTech === 0 ? "indicator active" : "indicator"}
             onClick={() => handleTechChange(0)}>
-            <div className='circleBg'></div>
-            <h1 className='num'>1</h1>
+            <div className='circleBg'>
+              <h1 className='num'>1</h1>
+            </div>
           </div>
 
           <div
             className={currentTech === 1 ? "indicator active" : "indicator"}
             onClick={() => handleTechChange(1)}>
-            <div className='circleBg'></div>
-            <h1 className='num'>2</h1>
+            <div className='circleBg'>
+              <h1 className='num'>2</h1>
+            </div>
           </div>
 
           <div
             className={currentTech === 2 ? "indicator active" : "indicator"}
             onClick={() => handleTechChange(2)}>
-            <div className='circleBg'></div>
-            <h1 className='num'>3</h1>
+            <div className='circleBg'>
+              <h1 className='num'>3</h1>
+            </div>
           </div>
         </div>
 
@@ -55,7 +59,7 @@ const Technology = () => {
         ////////*/}
         <div
           className='techSlider'
-          style={{ transform: `translateX(-${100 * currentTech}vw)` }}>
+          style={{ transform: `translateY(-${100 * currentTech}vh)` }}>
           {/* Slide 0 */}
           <div className={currentTech === 0 ? "techSlide active" : "techSlide"}>
             <div className='imgContainer'>
@@ -68,7 +72,7 @@ const Technology = () => {
             </div>
           </div>
           {/* Slide 1 */}
-          <div className={currentTech === 0 ? "techSlide active" : "techSlide"}>
+          <div className={currentTech === 1 ? "techSlide active" : "techSlide"}>
             <div className='imgContainer'>
               <img src={spacePortImg} alt='' />
             </div>
@@ -79,7 +83,7 @@ const Technology = () => {
             </div>
           </div>
           {/* Slide 2 */}
-          <div className={currentTech === 0 ? "techSlide active" : "techSlide"}>
+          <div className={currentTech === 2 ? "techSlide active" : "techSlide"}>
             <div className='imgContainer'>
               <img src={spaceCapsuleImg} alt='' />
             </div>

@@ -8,13 +8,14 @@
   justify-content: center;
 
   .contentContainer {
-    outline: 1px solid white;
+    // outline: 1px solid white;
     width: $desktopWidth;
     height: $desktopHeight;
     display: flex;
     justify-content: center;
+    position: relative;
     .title {
-      outline: 1px solid coral;
+      // outline: 1px solid coral;
       // color: white;
       // display: flex;
       // height: inherit;
@@ -23,6 +24,8 @@
       // font-size: 50px;
       // font-style: bold;
       position: absolute;
+      top: 212px;
+      left: 166px;
       h2 {
         color: white;
         font-size: $heading5Size;
@@ -42,38 +45,65 @@
       color: white;
       display: flex;
       flex-direction: column;
-      outline: 1px solid yellow;
+      // outline: 1px solid yellow;
       position: absolute;
       z-index: 3;
+      left: 166px;
+      top: 383px;
 
       .indicator {
-        margin-bottom: 20px;
+        margin-bottom: 33px;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        outline: 1px solid cyan;
-        width: 50px;
-        height: 50px;
+        // outline: 1px solid cyan;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        z-index: 10;
+
+        &.active {
+          .circleBg {
+            background-color: white;
+            color: rgb(73, 73, 73);
+            border: none;
+          }
+        }
+
         .circleBg {
           // position: relative;
           // top: 0px;
           // left: 0px;
-          width: 50px;
-          height: 50px;
-          background-color: white;
+          width: 80px;
+          height: 80px;
+          background-color: transparent;
+          border: 1px solid grey;
           border-radius: 50%;
-          // display: flex;
-          // justify-content: center;
-          // align-content: center;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          transition: all 0.3s ease;
+          &:hover {
+            border: 1px solid white;
+            transform: scale(0.9);
+            background-color: transparent;
+            color: white;
+            .num {
+              transform: scale(1.2);
+            }
+          }
         }
 
         .num {
-          z-index: 4;
-          position: absolute;
+          z-index: 1;
+          // outline: 1px solid green;
+          align-self: center;
+          transition: all 0.3s ease;
+          // position: absolute;
           // top: 25px;
-          // left: 25px;
-          color: grey;
+          // left: ;
+          // color: grey;
           // width: 50px;
           // height: 50px;
         }
@@ -81,10 +111,69 @@
     }
 
     .techSlider {
+      height: 100vh * 5;
+      width: $desktopWidth;
+      display: flex;
+      flex-direction: column;
+      transition: all 1s ease;
+
       .techSlide {
-        display: none;
-        outline: 1px solid green;
+        // display: none;
+        // outline: 1px solid green;
         color: white;
+        width: $desktopWidth;
+        height: $desktopHeight;
+        margin-bottom: calc(100vh - #{$desktopHeight});
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        opacity: 0;
+        transition: all 1s ease;
+
+        &.active {
+          opacity: 1;
+        }
+
+        .imgContainer {
+          position: absolute;
+          right: 0px;
+          top: 273px;
+        }
+
+        .infoContainer {
+          position: absolute;
+          // outline: 1px solid cyan;
+          left: 325px;
+          top: 381px;
+          width: 475px;
+          height: 350px;
+
+          .header {
+            font-family: $condensedFont;
+            text-transform: uppercase;
+            font-weight: 100;
+            font-size: $bodyTextSize;
+            margin-bottom: 11px;
+            letter-spacing: 1.9px;
+          }
+
+          .name {
+            text-transform: uppercase;
+            font-weight: 100;
+            font-family: $regularHeadingFont;
+            font-size: $heading3Size;
+            margin-bottom: 16px;
+          }
+
+          .description {
+            font-family: $regularTextFont;
+            font-size: $bodyTextSize;
+            font-weight: 100;
+            padding-right: 30px;
+            line-height: 32px;
+          }
+        }
       }
     }
   }
