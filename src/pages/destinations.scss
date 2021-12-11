@@ -9,6 +9,11 @@
   display: flex;
   justify-content: center;
 
+  @include tablet {
+    min-height: $tabletHeight;
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+
   .contentContainer {
     // outline: 1px solid white;
     width: $desktopWidth;
@@ -18,6 +23,16 @@
     // justify-content: center;
     position: relative;
     transition: opacity 0.5s ease;
+
+    @include tablet {
+      // display: flex;
+      // align-items: center;
+      width: $tabletWidth;
+      height: $tabletHeight;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
     opacity: 0;
     &.active {
       opacity: 1;
@@ -27,6 +42,7 @@
       position: absolute;
       top: 212px;
       left: 166px;
+
       h2 {
         font-weight: 100;
         font-size: $heading5Size;
@@ -38,6 +54,18 @@
           color: grey;
           font-weight: 600;
           margin-right: 26px;
+        }
+      }
+      @include tablet {
+        position: absolute;
+        top: 13%;
+        left: 20%;
+        h2 {
+          font-size: 23px;
+          letter-spacing: 2px;
+          span {
+            margin-right: 15px;
+          }
         }
       }
     }
@@ -53,6 +81,11 @@
       left: 833px;
       top: 310px;
       z-index: 3;
+      @include tablet {
+        position: absolute;
+        top: 56%;
+        left: calc(50% - (283px / 2));
+      }
       .textContainer {
         text-transform: uppercase;
         font-family: $condensedFont;
@@ -94,6 +127,9 @@
       z-index: 5;
       transition: all 1s ease;
       // background-color: grey;
+      @include tablet {
+        height: $tabletHeight;
+      }
 
       .planetSlide {
         color: white;
@@ -112,6 +148,12 @@
         // position: relative;
         // top: 0px;
         // left: 0px;
+
+        @include tablet {
+          width: $tabletWidth;
+          height: $tabletHeight;
+          margin-right: calc((100vw - #{$tabletWidth}) / 1);
+        }
 
         &.active {
           opacity: 1;
@@ -186,6 +228,55 @@
                 font-weight: 100;
                 letter-spacing: 0.5px;
               }
+            }
+          }
+        }
+
+        @include tablet {
+          width: $tabletWidth;
+          height: $tabletHeight;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .imgContainer {
+            position: static;
+            width: 310px;
+            height: 310px;
+            margin-top: 19%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .infoContainer {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10%;
+            .name {
+              font-size: 80px;
+            }
+            .description {
+              margin-top: 0px;
+              width: 550px;
+              text-align: center;
+              // height: auto;
+              font-size: 15px;
+              line-height: 25px;
+            }
+          }
+          .statsContainer {
+            .left {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+            .right {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
             }
           }
         }
