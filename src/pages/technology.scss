@@ -7,6 +7,10 @@
   min-height: $desktopHeight;
   display: flex;
   justify-content: center;
+  @include tablet {
+    min-height: $tabletHeight;
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
 
   .contentContainer {
     // outline: 1px solid white;
@@ -17,6 +21,12 @@
     position: relative;
     transition: opacity 0.5s ease;
     opacity: 0;
+    @include tablet {
+      width: $tabletWidth;
+      height: $tabletHeight;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
     &.active {
       opacity: 1;
     }
@@ -45,6 +55,18 @@
           margin-right: 21px;
         }
       }
+      @include tablet {
+        position: absolute;
+        top: 13%;
+        left: 19.5%;
+        h2 {
+          font-size: 23px;
+          letter-spacing: 2px;
+          span {
+            margin-right: 15px;
+          }
+        }
+      }
     }
 
     .techSelector {
@@ -56,6 +78,12 @@
       z-index: 3;
       left: 166px;
       top: 383px;
+      @include tablet {
+        flex-direction: row;
+        position: absolute;
+        top: 57%;
+        left: 40.5%;
+      }
 
       .indicator {
         margin-bottom: 33px;
@@ -68,6 +96,12 @@
         height: 80px;
         cursor: pointer;
         z-index: 10;
+
+        @include tablet {
+          width: 60px;
+          height: 60px;
+          margin-right: 15px;
+        }
 
         &.active {
           .circleBg {
@@ -90,6 +124,10 @@
           justify-content: center;
           align-content: center;
           transition: all 0.3s ease;
+          @include tablet {
+            width: 60px;
+            height: 60px;
+          }
           &:hover {
             border: 1px solid white;
             transform: scale(0.9);
@@ -123,6 +161,10 @@
       flex-direction: column;
       transition: all 1s ease;
 
+      @include tablet {
+        width: $desktopWidth;
+      }
+
       .techSlide {
         // display: none;
         // outline: 1px solid green;
@@ -137,6 +179,14 @@
         opacity: 0;
         transition: all 1s ease;
 
+        @include tablet {
+          width: $tabletWidth;
+          height: $tabletHeight;
+          margin-bottom: calc((100vh - #{$tabletHeight}) / 1);
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+
         &.active {
           opacity: 1;
         }
@@ -145,6 +195,9 @@
           position: absolute;
           right: 0px;
           top: 273px;
+          .imgLandscape {
+            display: none;
+          }
         }
 
         .infoContainer {
@@ -178,6 +231,43 @@
             font-weight: 100;
             padding-right: 30px;
             line-height: 32px;
+          }
+        }
+
+        @include tablet {
+          .imgContainer {
+            position: static;
+            .imgPortrait {
+              display: none;
+            }
+            .imgLandscape {
+              display: block;
+              margin-top: 29%;
+            }
+          }
+          .infoContainer {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            height: auto;
+            margin-top: 155px;
+
+            .header {
+              font-size: 17px;
+              text-align: center;
+              letter-spacing: 2.3px;
+            }
+            .name {
+              font-size: 40px;
+            }
+            .description {
+              text-align: center;
+              font-size: 16px;
+              width: 85%;
+              // line-height: 25px;
+            }
           }
         }
       }

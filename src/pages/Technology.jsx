@@ -2,12 +2,15 @@ import "./technology.scss";
 import { useState } from "react";
 import * as data from "../data.json";
 
-//landscape images
+//portrait images
 import launchVehicleImg from "../assets/technology/image-launch-vehicle-portrait.jpg";
 import spaceCapsuleImg from "../assets/technology/image-space-capsule-portrait.jpg";
 import spacePortImg from "../assets/technology/image-spaceport-portrait.jpg";
 
-//portrait images
+//landscape images
+import launchVehicleImgLandscape from "../assets/technology/image-launch-vehicle-landscape.jpg";
+import spaceCapsuleImgLandscape from "../assets/technology/image-space-capsule-landscape.jpg";
+import spacePortImgLandscape from "../assets/technology/image-spaceport-landscape.jpg";
 
 const Technology = ({ active }) => {
   const [currentTech, setCurrentTech] = useState(0);
@@ -63,7 +66,12 @@ const Technology = ({ active }) => {
           {/* Slide 0 */}
           <div className={currentTech === 0 ? "techSlide active" : "techSlide"}>
             <div className='imgContainer'>
-              <img src={launchVehicleImg} alt='' />
+              <img src={launchVehicleImg} className='imgPortrait' alt='' />
+              <img
+                src={launchVehicleImgLandscape}
+                className='imgLandscape'
+                alt=''
+              />
             </div>
             <div className='infoContainer'>
               <h2 className='header'>the terminology...</h2>
@@ -74,7 +82,12 @@ const Technology = ({ active }) => {
           {/* Slide 1 */}
           <div className={currentTech === 1 ? "techSlide active" : "techSlide"}>
             <div className='imgContainer'>
-              <img src={spacePortImg} alt='' />
+              <img src={spacePortImg} className='imgPortrait' alt='' />
+              <img
+                src={spacePortImgLandscape}
+                className='imgLandscape'
+                alt=''
+              />
             </div>
             <div className='infoContainer'>
               <h2 className='header'>the terminology...</h2>
@@ -85,7 +98,12 @@ const Technology = ({ active }) => {
           {/* Slide 2 */}
           <div className={currentTech === 2 ? "techSlide active" : "techSlide"}>
             <div className='imgContainer'>
-              <img src={spaceCapsuleImg} alt='' />
+              <img src={spaceCapsuleImg} className='imgPortrait' alt='' />
+              <img
+                src={spaceCapsuleImgLandscape}
+                className='imgLandscape'
+                alt=''
+              />
             </div>
             <div className='infoContainer'>
               <h2 className='header'>the terminology...</h2>
