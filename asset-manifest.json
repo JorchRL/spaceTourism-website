@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/spaceTourism-website/static/css/main.3d7928f1.chunk.css",
+    "main.css": "/spaceTourism-website/static/css/main.7fc9de4c.chunk.css",
     "main.js": "/spaceTourism-website/static/js/main.8fd8763b.chunk.js",
     "main.js.map": "/spaceTourism-website/static/js/main.8fd8763b.chunk.js.map",
     "runtime-main.js": "/spaceTourism-website/static/js/runtime-main.71cc553b.js",
@@ -8,11 +8,11 @@
     "static/js/2.42b0e36a.chunk.js": "/spaceTourism-website/static/js/2.42b0e36a.chunk.js",
     "static/js/2.42b0e36a.chunk.js.map": "/spaceTourism-website/static/js/2.42b0e36a.chunk.js.map",
     "index.html": "/spaceTourism-website/index.html",
-    "static/css/main.3d7928f1.chunk.css.map": "/spaceTourism-website/static/css/main.3d7928f1.chunk.css.map",
+    "static/css/main.7fc9de4c.chunk.css.map": "/spaceTourism-website/static/css/main.7fc9de4c.chunk.css.map",
     "static/js/2.42b0e36a.chunk.js.LICENSE.txt": "/spaceTourism-website/static/js/2.42b0e36a.chunk.js.LICENSE.txt",
-    "static/media/crew.scss": "/spaceTourism-website/static/media/background-crew-desktop.88a3c692.jpg",
-    "static/media/destinations.scss": "/spaceTourism-website/static/media/background-destination-desktop.468b922c.jpg",
-    "static/media/home.scss": "/spaceTourism-website/static/media/background-home-desktop.cdf3864e.jpg",
+    "static/media/crew.scss": "/spaceTourism-website/static/media/background-crew-tablet.16d51cf6.jpg",
+    "static/media/destinations.scss": "/spaceTourism-website/static/media/background-destination-tablet.8f55d346.jpg",
+    "static/media/home.scss": "/spaceTourism-website/static/media/background-home-tablet.bc9efcc3.jpg",
     "static/media/technology.scss": "/spaceTourism-website/static/media/background-technology-desktop.b7b589b3.jpg",
     "static/media/image-anousheh-ansari.2d647128.png": "/spaceTourism-website/static/media/image-anousheh-ansari.2d647128.png",
     "static/media/image-douglas-hurley.7540fbb6.png": "/spaceTourism-website/static/media/image-douglas-hurley.7540fbb6.png",
@@ -29,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.71cc553b.js",
     "static/js/2.42b0e36a.chunk.js",
-    "static/css/main.3d7928f1.chunk.css",
+    "static/css/main.7fc9de4c.chunk.css",
     "static/js/main.8fd8763b.chunk.js"
   ]
 }
