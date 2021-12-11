@@ -1,10 +1,10 @@
 import "./home.scss";
 import React from "react";
 
-const Home = ({ handleScreenChange }) => {
+const Home = ({ handleScreenChange, active }) => {
   return (
     <div className='home'>
-      <div className='contentContainer'>
+      <div className={active ? "contentContainer active" : "contentContainer"}>
         <div className='left'>
           <div className='textContainer'>
             <h4>so, you want to travel to</h4>

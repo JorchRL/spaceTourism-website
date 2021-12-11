@@ -25,7 +25,10 @@ const App = () => {
         style={{
           transform: `translateX(${-100 * currentPage}vw)`,
         }}>
-        <Home handleScreenChange={handleScreenChange} />
+        <Home
+          handleScreenChange={handleScreenChange}
+          active={currentPage === 0 ? true : false}
+        />
         <Destinations active={currentPage === 1 ? true : false} />
         <Crew active={currentPage === 2 ? true : false} />
         <Technology active={currentPage === 3 ? true : false} />

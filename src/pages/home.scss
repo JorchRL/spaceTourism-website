@@ -17,6 +17,12 @@
     display: flex;
     align-content: center;
 
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+
     .left {
       // outline: 1px solid lightgrey;
       flex: 1;

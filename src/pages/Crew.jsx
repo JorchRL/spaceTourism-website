@@ -14,7 +14,7 @@ const Crew = ({ active }) => {
   };
   return (
     <div className='crew'>
-      <div className='contentContainer'>
+      <div className={active ? "contentContainer active" : "contentContainer"}>
         <div className='title'>
           <h2>
             <span>02</span>meet your crew

@@ -9,7 +9,7 @@ import spacePortImg from "../assets/technology/image-spaceport-portrait.jpg";
 
 //portrait images
 
-const Technology = () => {
+const Technology = ({ active }) => {
   const [currentTech, setCurrentTech] = useState(0);
   const tech = data.technology;
 
@@ -19,7 +19,7 @@ const Technology = () => {
   };
   return (
     <div className='technology'>
-      <div className='contentContainer'>
+      <div className={active ? "contentContainer active" : "contentContainer"}>
         {/* Title */}
         <div className='title'>
           <h2>

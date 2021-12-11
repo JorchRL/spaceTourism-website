@@ -19,7 +19,7 @@ const Destinations = ({ active }) => {
 
   return (
     <div className='destinations'>
-      <div className='contentContainer'>
+      <div className={active ? "contentContainer active" : "contentContainer"}>
         <div className='title'>
           <h2>
             <span>01</span>pick your destination
