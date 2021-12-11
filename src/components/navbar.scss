@@ -57,6 +57,9 @@
         justify-content: flex-start;
         height: 97%;
         margin-left: 124px;
+        @include tablet {
+          margin-right: 10px;
+        }
 
         .menuItem {
           // margin-left: 50px;
@@ -70,6 +73,9 @@
           // outline: 1px solid white;
           margin-top: 5px;
           margin-right: 55px;
+          @include tablet {
+            margin-right: 35px;
+          }
 
           &:hover {
             .indicator {
@@ -96,6 +102,10 @@
               letter-spacing: $navTextSpacing;
               text-transform: uppercase;
 
+              @include tablet {
+                font-size: 10px;
+              }
+
               span {
                 font-weight: bold;
               }
@@ -115,6 +125,17 @@
             }
           }
         }
+      }
+    }
+
+    @include tablet {
+      margin-top: 0px;
+      .logo {
+        margin-left: 40px;
+      }
+
+      span {
+        display: none;
       }
     }
   }
